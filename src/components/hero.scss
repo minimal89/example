@@ -1,0 +1,29 @@
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  @media only screen and (max-width: 600px) {
+    height: 59vh;
+  }
+  .hero-content{
+    padding-top: 7%;
+  }
+  h1 {
+    font-size: 2.2em;
+    font-weight: normal;
+    @media (min-width: 767px) {
+      font-size: 3.6em;
+    }
+  }
+  h4{
+    font-size: 1.3em;
+    font-weight: lighter;
+    @media (min-width: 767px) {
+      font-size: 1.8em;
+    }
+  }
+}

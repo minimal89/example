@@ -1,0 +1,114 @@
+.footer{
+  background-color: #101A35;
+  width: 100%;
+}
+.footer-content{
+  width: 98%;
+  padding: 3em 0 3em 0em;
+  .footer-links{
+    width: 100%;
+    ;
+    ul{
+      width: 100%;
+      padding: 0;
+      h3{
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: white;
+        margin-bottom: 20px;
+      }
+      li{
+        color: #8CCEEC;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        margin-bottom: 7px;
+        opacity: 1;
+        transition: color 0.25s;
+      }
+    }
+  }
+  .border-left{
+    @media (min-width: 1200px) {
+      border-left: 1px solid #8CCEEC;
+      padding-left: 45px;
+    }
+  }
+  .footer-must{
+    float: right;
+    border-left: 1px solid #909CBB;
+    //margin: 2em 0;
+    ul{
+      h3{
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: white;
+        margin-bottom: 20px;
+      }
+      li{
+        color: #8CCEEC;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        margin-bottom: 7px;
+        opacity: 1;
+        transition: color 0.25s;
+      }
+    }
+  }
+}
+.copyright {
+  line-height: 1.6;
+  padding: 20px 0;
+  font-size: 14px;
+  ul {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: .5em;
+  }
+  li{
+    display: block;
+    float: left;
+    font-weight: 300;
+  }
+  h5{
+    padding: 0;
+    width: 100%;
+    margin: .5em 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.social{
+  margin: 20px 0;
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    float: left;
+    display: inline;
+    margin: 0 1em 0 0;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    @media (min-width: 767px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

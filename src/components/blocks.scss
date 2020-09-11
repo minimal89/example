@@ -1,0 +1,63 @@
+.awardsWinning{
+  // here
+  padding: 2em 0;
+  .award {
+    display: flex;
+    justify-content: center;
+  }
+  .award img {
+    width: 50%;
+  }
+  .recognize{
+    width: 100%;
+    @media (min-width: 600px) {
+      max-width: 500px;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+}
+.paddingClass{
+  padding: 5em 0;
+  @media only screen and (max-width: 600px) {
+    padding: 2em 0;
+  }
+}
+.marginBottomClass{
+  margin: 0 0 10em 0;
+}
+
+
+.buttonBlocks{
+  display: inline-block;
+  font-family: 'Forno-m',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: none;
+  padding: 16px 32px;
+  text-decoration: none !important;
+  outline: none !important;
+  background-color: #EB5888;
+  color: #FFF;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  a{
+    text-decoration: none;
+    color: #FFF;
+  }
+  &:hover{
+    background-color: #FFF;
+    color: #EB5888;
+    a{
+      color: #EB5888;
+      background: #FFFFFF;
+    }
+  }
+}

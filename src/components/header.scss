@@ -1,0 +1,210 @@
+header {
+    background: #142B65;
+    display: block;
+
+    input[type=checkbox] {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    input[type=checkbox]:checked + div + .nav {
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
+        position: relative;
+        height: 100vh;
+        display: block;
+    }
+
+    input[type=checkbox]:checked + div .close { display: block }
+    input[type=checkbox]:checked + div .open { display: none }
+}
+.top-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    @media (min-width: 990px) {
+        padding: 10px 0;
+        justify-content: flex-end;
+    }
+    a {
+        font-size: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        line-height: 2.4;
+        font-weight: lighter;
+        border-bottom: 2px solid transparent;
+        @media (min-width: 360px) {
+            font-size: 12px;
+            padding: 0 5px;
+        }
+        @media (min-width: 600px) {
+            padding: 0 20px;
+        }
+        @media (min-width: 990px) {
+            line-height: 3.6;
+            font-size: 14px;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+        &:hover{
+            border-bottom: 2px solid #009FD7;
+        }
+    }
+}
+
+.fullWidthMenu{
+    box-sizing: border-box;
+    width: 100%;
+    background: #142B65;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @media only screen and (max-width: 600px) {
+        height: initial;
+    }
+}
+.bottom-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #142B65;
+    position: relative;
+    @media (min-width: 990px) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    @media (min-width: 1200px) {
+        padding: 20px 0;
+    }
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    width: 144px;
+    @media (min-width: 1400px) {
+        width: 236px;
+    }
+    img { width: 100% }
+    &-wrapper {
+        padding: 20px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        z-index: 10;
+        @media (min-width: 600px) {
+            justify-content: center;
+            padding: 20px 0 0 0;
+            width: 236px;
+        }
+        @media (min-width: 990px) {
+            padding: 0;
+            justify-content: flex-start;
+        }
+    }
+}
+.hamburger {
+    cursor: pointer;
+    color: white;
+    @media (min-width: 600px) {
+        display: none;
+    }
+    svg + svg {
+        display: none;
+    }
+}
+.nav {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 100%;
+    padding: 20px 0 40px;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: .3s opacity, .3s transform;
+    background: #142B65;
+    box-sizing: border-box;
+    display: none;
+
+    @media (min-width: 600px) {
+        padding: 20px 0;
+        height: auto;
+        position: relative;
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        left: 0;
+    }
+    @media (min-width: 600px) and (max-width: 990px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    li{
+        display: list-item;
+        @media (min-width: 600px) {
+            margin: 0 5px;
+            display: inline-block;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        @media (min-width: 990px) {
+            margin: 0 20px;
+        }
+    }
+    a {
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: lighter;
+        line-height: 3.4;
+        border-bottom: 1px solid white;
+        transition: .3s border-bottom-color;
+        &:hover{
+            border-color: #009FD7;
+        }
+        @media (min-width: 600px) {
+            font-size: 14px;
+            line-height: 1.6;
+            border-width: 2px;
+            border-color: transparent;
+        }
+        @media (min-width: 1200px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.menuButton {
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+

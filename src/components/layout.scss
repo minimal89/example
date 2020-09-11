@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+html {
+    margin: 0;
+    //font-family: "Helvetica";
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+li{
+    list-style-type: none;
+}
+@mixin row {
+    &-column {
+        flex-direction: column;
+    }
+    &-column-reverse {
+        flex-direction: column-reverse;
+    }
+    &-row {
+        flex-direction: row;
+    }
+    &-row-reverse {
+        flex-direction: row-reverse;
+    }
+}
+.flex {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    @include row;
+    &-sm { @media (min-width: 767px) { @include row }}
+    &-md { @media (min-width: 767px) { @include row }}
+    &-lg { @media (min-width: 990px) { @include row }}
+}
+.justify{
+    &-center{
+        justify-content: center;
+    }
+    &-start{
+        justify-content: flex-start;
+    }
+    &-end{
+        justify-content: flex-end;
+    }
+    &-space-between {
+        justify-content: space-between;
+    }
+}
+.align-items {
+    &-start {
+        align-items: flex-start;
+    }
+    &-end {
+        align-items: flex-end;
+    }
+    &-center {
+        align-items: center;
+    }
+
+}
+
+@mixin col {
+    &-1 { width: 8.3333% }
+    &-2 { width: 16.6666% }
+    &-3 { width: 25% }
+    &-4 { width: 33.3333% }
+    &-5 { width: 41.6666% }
+    &-6 { width: 50% }
+    &-7 { width: 58.3333% }
+    &-8 { width: 66.6666% }
+    &-9 { width: 75% }
+    &-10 { width: 83.33% }
+    &-11 { width: 91.66% }
+    &-12 { width: 100% }
+}
+.col {
+    width: 100%;
+    @include col;
+    &-xs {@media (max-width: 600px) {@include col}}
+    &-sm {@media (min-width: 600px) {@include col}}
+    &-md {@media (min-width: 990px) {@include col}}
+    &-lg {@media (min-width: 1200px) {@include col}}
+}
+
+.block {
+    box-sizing: border-box;
+    padding: 5em;
+    .blue{
+        color: #002D72;
+        text-align: center;
+    }
+    .orange{
+        color: #F3953F;
+    }
+    .rose{
+        color: #EB5888;
+    }
+    .skyblue{
+        color: #1A9EDA;
+    }
+    &-space {
+        padding: 0 20px;
+        @media (min-width: 600px) {
+            padding: 0 40px;
+        }
+        &-lg {
+            @media (min-width: 990px) {
+                padding: 0 90px 90px;
+            }
+        }
+    }
+    &-footer-space {
+        //padding: 0 300px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    h2{
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: normal;
+        @media only screen and (max-width: 600px) {
+            font-size: 30px;
+        }
+    }
+    h3{
+        font-size: 30px;
+        line-height: 44px;
+        font-weight: normal;
+    }
+    p{
+        color: #002D72;
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 300;
+        @media only screen and (max-width: 600px) {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 767px) {
+        .br { display: none }
+    }
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 1.4em;
+    padding: .9em 1.8em;
+    white-space: nowrap;
+    background-color: #EB5888;
+    color: white;
+    outline: none;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s background-color;
+    cursor: pointer;
+    &:hover {
+        color: #EB5888;
+        background-color: white;
+    }
+    &-sm {
+        font-size: 12px;
+    }
+    &-lg {
+        font-size: 18px;
+    }
+}
