@@ -2,11 +2,13 @@
   // here
   padding: 2em 0;
   .award {
-    display: flex;
-    justify-content: center;
+    //display: flex;
+    //justify-content: center;
   }
   .award img {
-    width: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   .recognize{
     width: 100%;
